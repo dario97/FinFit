@@ -16,7 +16,7 @@ function getADABalance(accountAddress){
       'headers': HEADERS
     }
   
-    const URL = `${getScriptProperty(PROPERTIES_KEYS.SCRIPT.BLOCKFROST_HOSTNAME)}/api/v0/accounts/${accountAddress}`;
+    const URL = `${scriptConfig.blockfrostHostname}/api/v0/accounts/${accountAddress}`;
     
     let data = makeRequest(URL, PARAMS);
 
