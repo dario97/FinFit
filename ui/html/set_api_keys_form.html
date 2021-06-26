@@ -12,8 +12,8 @@
 <body>
   
   <div class="mb-3">
-    <label for="etherscan-api-key" class="form-label">Etherscan API Key</label>
-    <input type="text" class="form-control" id="etherscan-api-key" placeholder="Your Etherscan API Key">
+    <label for="covalent-api-key" class="form-label">Covalent API Key</label>
+    <input type="text" class="form-control" id="covalent-api-key" placeholder="Your Covalent API Key">
   </div>
   <div class="mb-3">
     <label for="blockfrost-api-Key" class="form-label">Blockfrost Api Key</label>
@@ -30,11 +30,11 @@
       console.log('Adding API Keys');
 
       let apiKeys = {};
-      apiKeys.etherscanApiKey = $('#eth-api-key').val();
+      apiKeys.etherscanApiKey = $('#covalent-api-key').val();
       apiKeys.blockfrostApiKey = $('#cardano-api-key').val();
 
       google.script.run.withSuccessHandler(function(){
-        $('#eth-api-key').val('');
+        $('#covalent-api-key').val('');
         $('#cardano-api-key').val('');
         showAlertMessage('API Keys added!', true);
         setTimeout(hideAlertMessage, 2000);
