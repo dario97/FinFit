@@ -10,5 +10,12 @@ const scriptConfig = {
             etherscanApiKey: "etherscanApiKey",
             covalentApiKey: "covalentApiKey" 
         }
+    },
+    blockchainIDs:{
+        ethereum: 1,
+        polygon: 137,
+        bsc: 56,
+        avalanche: 43114,
+        fantom: 250, 
     }
 }
