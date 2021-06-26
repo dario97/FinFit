@@ -6,12 +6,12 @@ function getTokenBalance(accountAddress, tokenTicker, blockchainId){
     let data = makeRequest(URL);
     let tokenInfo;
 
-    data.items.forEach(token => {
-        if(token.contract_ticker_symbol === tokenTicker){
-            tokenInfo = token;
+    for (let i = 0; i < data.items.length; i++) {
+        if(data.items[i].contract_ticker_symbol === tokenTicker){
+            tokenInfo = data.items[i];
             break;
         }
-    })
+    }
 
     if(tokenInfo === undefined){
         throw new Error('Token not found. Please check the token ticker.')
