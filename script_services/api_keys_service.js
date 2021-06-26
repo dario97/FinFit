@@ -1,5 +1,4 @@
-function addApiKeys(apiKeys){
-  
+function addApiKeys(apiKeys){  
     if(apiKeys.covalentApiKey){
         addUserProperty(scriptConfig.propertiesKeys.apiKeys.covalentApiKey, apiKeys.covalentApiKey);
     }

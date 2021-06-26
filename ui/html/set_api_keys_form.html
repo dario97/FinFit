@@ -31,11 +31,11 @@
 
       let apiKeys = {};
       apiKeys.covalentApiKey = $('#covalent-api-key').val();
-      apiKeys.blockfrostApiKey = $('#cardano-api-key').val();
+      apiKeys.blockfrostApiKey = $('#blockfrost-api-Key').val();
 
       google.script.run.withSuccessHandler(function(){
         $('#covalent-api-key').val('');
-        $('#cardano-api-key').val('');
+        $('#blockfrost-api-Key').val('');
         showAlertMessage('API Keys added!', true);
         setTimeout(hideAlertMessage, 2000);
       }).addApiKeys(apiKeys);
