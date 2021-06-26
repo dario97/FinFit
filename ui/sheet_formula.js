@@ -1,7 +1,7 @@
 function TOKENBALANCE(tokenTicker, accountAddress, blockchainName, refreshCell){
     console.info(`Looking for ${tokenTicker} balance...`);
 
-    if(tokenName.toUpperCase === 'ADA'){
+    if(tokenTicker.toUpperCase === 'ADA'){
         return getADABalance(accountAddress);
     }else{
         return getTokenBalance(accountAddress, tokenTicker, blockchainIdResolver(blockchainName));
@@ -9,5 +9,5 @@ function TOKENBALANCE(tokenTicker, accountAddress, blockchainName, refreshCell){
 }
 
 function blockchainIdResolver(blockchainName){
-    return scriptConfig.blockchainIDs[blockchainName.toLoweCase()];
+    return scriptConfig.blockchainIDs[blockchainName.toLowerCase()];
 }

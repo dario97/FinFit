@@ -13,7 +13,7 @@ function onOpen(){
 function showSetAPIKeysForm(){
     let ui = SpreadsheetApp.getUi();
   
-    var htmlService = HtmlService.createTemplateFromFile('set_api_keys_form');
+    var htmlService = HtmlService.createTemplateFromFile('ui/html/set_api_keys_form');
     const html = htmlService.evaluate();
     ui.showModalDialog(html, "Set API Keys");
   }

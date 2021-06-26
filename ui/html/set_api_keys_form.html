@@ -30,7 +30,7 @@
       console.log('Adding API Keys');
 
       let apiKeys = {};
-      apiKeys.etherscanApiKey = $('#covalent-api-key').val();
+      apiKeys.covalentApiKey = $('#covalent-api-key').val();
       apiKeys.blockfrostApiKey = $('#cardano-api-key').val();
 
       google.script.run.withSuccessHandler(function(){
