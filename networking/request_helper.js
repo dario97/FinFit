@@ -13,7 +13,6 @@ function makeRequest(url, params, cacheKey){
 
       let response = UrlFetchApp.fetch(url, params);
       dataToReturn = JSON.parse(response.getContentText());
-      console.log(JSON.stringify(dataToReturn));
       
       if (response && response.getResponseCode() == 200 && dataToReturn.length > 1 && dataToReturn.length < 99900) {
           cache.put(CACHE_KEY, response.getContentText(), dataToReturn["caching_time"] || 60)
