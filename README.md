@@ -1,1 +1,1 @@
-# FinFit
+# FinFit - Google Apps Script
